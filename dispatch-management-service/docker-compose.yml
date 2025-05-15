@@ -9,7 +9,7 @@ services:
         networks: 
             - dispatch-system
         ports:
-            - 13330:3000
+            - 5500
         restart: always
 
 networks: 
