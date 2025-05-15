@@ -1,0 +1,18 @@
+services:
+    dispatch-management-service:
+        build: .
+        command: ["yarn", "start"]
+        container_name: "dispatch-management-service" 
+        environment: 
+            - NODE_ENV=production
+            - PORT=5500
+        networks: 
+            - dispatch-system
+        ports:
+            - 13330:3000
+        restart: always
+
+networks: 
+    dispatch-system:
+        external: true
+version: '3.7'
